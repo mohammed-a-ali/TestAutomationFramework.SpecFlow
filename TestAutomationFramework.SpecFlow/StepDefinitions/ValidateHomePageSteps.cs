@@ -1,5 +1,6 @@
 ﻿using BLL.Browser;
 using BLL.Pages;
+using BLL.Utilities;
 using FluentAssertions;
 using OpenQA.Selenium;
 using System.Configuration;
@@ -12,6 +13,7 @@ namespace TestAutomationFramework.SpecFlow.StepDefinitions
     {
         private static readonly string baseURL = ConfigurationManager.AppSettings["Test"];
         HomePageElements home = new HomePageElements();
+        Helper help = new Helper();
 
         [Given(@"I am on the Home Page")]
         public void GivenIAmOnTheHomePage()
