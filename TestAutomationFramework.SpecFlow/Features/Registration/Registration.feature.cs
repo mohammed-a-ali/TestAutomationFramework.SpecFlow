@@ -92,7 +92,17 @@ this.ScenarioInitialize(scenarioInfo);
 #line 10
  testRunner.And("I enter \"Email\" into \"Email\" textbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 11
+ testRunner.And("I enter \"Password\" into \"Password\" textbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 12
+ testRunner.And("I enter \"ConfirmPassword\" into \"Password\" textbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 13
  testRunner.And("I invoke \"Register\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 14
+ testRunner.Then("\"result\" should be \"Your registration completed\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 15
+ testRunner.When("I invoke \"Continue\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 16
+ testRunner.And("I click \"Log out\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
