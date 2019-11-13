@@ -9,6 +9,12 @@ namespace TestAutomationFramework.SpecFlow
     public sealed class Hooks
     {
         private static readonly string browserName = ConfigurationManager.AppSettings["browser"];
+        private readonly ScenarioContext Context;
+
+        public Hooks(ScenarioContext Context)
+        {
+            this.Context = Context;
+        }
 
         // For additional details on SpecFlow hooks see http://go.specflow.org/doc-hooks
 
@@ -22,7 +28,7 @@ namespace TestAutomationFramework.SpecFlow
         [AfterScenario]
         public void AfterScenario()
         {
-            if (ScenarioContext.Current.TestError != null)
+            if (Context.TestError != null)
             {
                 ScreenShot.TakeScreenShot();
             }
